@@ -1,0 +1,213 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+% \usepackage{tgheros}
+% \renewcommand*\familydefault{\sfdefault} 
+% %% Only if the base font of the document is to be sans serif
+% \usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setsansfont{Arial}
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Милевская Виктория Андреена } \\ \vspace{5pt}
+    \small \faPhone* \texttt{+7 (916) 744-21-25} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{vicktoriamilewskaya@yandex.ru} \hspace{1pt} $|$ 
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{ г. Москва}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Опыт}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Яндекс}{Август 2022 — сейчас}
+      {Разработчик интерфейсов}{}
+      \resumeItemListStart
+        \resumeItem{Конструктор «Нейролендинги»: разработала полноценный продукт конуструктор для генерации лендингов с редактором блоков, модулем управления товарами и системой кастомизации. Спроектировала архитектуру клиентской части, сделала интерфейс, логику генерации и API}
+        \resumeItem{Разработала сценарий рекламы в Поиске специалистов и услуг: реализовала карточки в поиске, а так же сценарий в рекламном кабинете.}
+        \resumeItem{Объединила дежурства 2х отделов, привела дежурство к единому флоу, реализовала техдолг и инструменты для поддержки сервиса, что сократило количество тикетов, доходящих до разработки сервиса, в 4 раза.}
+         \resumeItem{Генеративные материалы в рекламном кабинете: реализовала внедрение саджеста генеративных картинок в рекламный кабинет, переписала полностью управление картинками в рекламе. Использование картинок, сгенерированные моделью, привело к тренду использования генеративных материалов ко всем рекламным материалам. Добавила саджест целевых действий, снизив долю кампаний без конверсий с 69 процентов до 67. }
+        \resumeItem{Инфраструктура сервиса: провела масштабное обновление балансировщиков для микросервисов приложения, переведя их на новую архитектуру, что исключило падения во время инцидентов в ДЦ компании.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Сбер}{Май 2021 — Август 2022}
+      {Инженер-программист}{}
+      \resumeItemListStart
+        \resumeItem{Полный цикл разработки клиент-серверных приложений: проектирование архитектуры БД, разработка REST API и создание адаптивных пользовательских интерфейсов.}
+        \resumeItem{Разработка высоконагруженной системы мониторинга СЦ: реализовала интерфейсы для прогнозирования инцидентов, графы связей и интеллектуальные дашборды (включая кастомизацию плагинов для Grafana)}
+        \resumeItem{Разработка внутренней антифрод-системы: реализовала  интерфейсы для прогнозирования инцидентов, графы связей и интеллектуальные дашборды (включая кастомизацию плагинов для Grafana)}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Comindware}{Февраль 2020 — Май 2021}
+      {Инженер-программист}{}
+      \resumeItemListStart
+        \resumeItem{Разработка мессенджера в составе Enterprise-платформы BPM/CRM-системы. Разработала архитектуру клиентского приложения: спроектировала модули для работы с сообщениями (отправка, получение, статусы, история), навигационные компоненты и контекстную информационную панель. Функционал работы с сообщениями такие как реплаи и форварды. Выполнила интеграцию React-компонентов в существующую Backbone-инфраструктуру, обеспечив бесшовную работу гибридного интерфейса.}
+        \resumeItem{Реализовала оптимизацию продукта для скринридеров.}
+        \resumeItem{Выполнила редизайн админской части приложения.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section {Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Национальный исследовательский университет «Высшая школа экономики»}{2025 -- сейчас}
+      {бакалавриат прикладной математики и информатики}{Москва}
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Навыки}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+    \textbf{Языки} {: Русский, Английский}\vspace{2pt} \\
+     \textbf{Python, Node.js, JavaScript, TypeScript, C++, HTML5, CSS/SCSSS, SQL (PostgreSQL, MySQL)}\vspace{2pt} \\
+      Git, ES6, React, Redux, MobX, Jest, Ajax, GraphQL, WebSocket, Django, Flask, FastAPI, SQLAlchemy, Jinja\vspace{2pt} \\
+      Постановка задач, декомпозиция задач, сode review, умение работать в команде, умение разбираться в чужом коде
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
