@@ -13,10 +13,10 @@ jobs:
       - name: Build Docker image
         run: docker build -t my-cv-image .
 
-      - name: Run container and copy PDF
+      - name: Copy PDF
         run: |
           docker create --name cv-container my-cv-image
-          docker cp cv-container:/cv/main.pdf ./main.pdf || docker cp cv-container:/main.pdf ./main.pdf
+          docker cp cv-container:/cv/main.pdf ./main.pdf
           docker rm cv-container
 
       - name: Upload PDF as artifact

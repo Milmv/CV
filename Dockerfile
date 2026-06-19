@@ -11,4 +11,4 @@ WORKDIR /cv
 
 COPY CV/ .
 
-CMD ["xelatex", "-interaction=nonstopmode", "main.tex"]
+RUN xelatex -interaction=nonstopmode main.tex
