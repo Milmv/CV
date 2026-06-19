@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y \
     texlive-full \
-    msttcorefonts \
+    fonts-liberation \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /CV
