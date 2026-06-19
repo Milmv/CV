@@ -10,4 +10,4 @@ WORKDIR /CV
 
 COPY CV/ .
 
-CMD ["pdflatex", "-interaction=nonstopmode", "main.tex"]
+CMD ["xelatex", "-interaction=nonstopmode", "main.tex"]
