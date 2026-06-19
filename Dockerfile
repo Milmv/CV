@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
     texlive-full \
     fonts-liberation \
     fonts-font-awesome \
+    fonts-freefont-otf \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /cv
